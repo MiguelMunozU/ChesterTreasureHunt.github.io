@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PepsiCo Treasure Hunt Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('../Miguel/resources/4.\ Transportation.jpg'); background-size: cover; background-position: center; overflow: hidden;">
+    <div id="videoContainer">
+        <video id="introVideo" src="../Yaz/Navigation.mp4" autoplay muted></video>
+    </div>
+    <div id="gameArea">
+        <div id="backgroundLoop"></div>
+        <img id="pepsiTruck" src="../Miguel/resources/Ship.png" alt="pepsiTruck">
+        <img id="bottle" src="../Mariana/Lays_Original.png" class="hidden" alt="bottle">
+    </div>
+    <div id="popup" class="hidden">
+        <div id="popup-content">
+            <div id="popup-image">
+                <img src="../Debanhi/resources/Chester.png" alt="Chester">
+            </div>
+            <div id="popup-question">
+                <p id="questionText"></p>
+                <div id="answerInput">
+                    <!-- Opciones de respuesta como botones de radio -->
+                    <label><input type="radio" name="quizChoice" value=""> Option 1 </label><br>
+                    <label><input type="radio" name="quizChoice" value=""> Option 2 </label><br>
+                    <label><input type="radio" name="quizChoice" value=""> Option 3 </label><br>
+                </div>
+                <br>
+                <button id="submitAnswer">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

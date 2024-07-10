@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map Popup Example</title>
+  <link rel="stylesheet" href="Map.css">
+</head>
+<body>
+  <!-- <button id="openMapButton">Open Map</button> -->
+   <br><br>
+  <button id="openMapButton">
+    <img src="resources/MapButton.png" alt="Icon" class="icon">
+  </button>
+  <div id="mapPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" id="closeMapButton">&times;</span>
+      <iframe src="Map.html" class="map-iframe" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="Map.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,146 @@
+/* Basic reset and styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Body */
+
+body {
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f2f2f2;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*   
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+  
+  .map {
+    position: relative;
+    width: 100%; /* Make the map width 100% of its container */
+    max-width: 1000px; /* Set a maximum width for the map */
+    height: auto; /* Automatically adjust height based on width */
+    max-height: 1000px; /* Set a maximum height for the map */
+    margin: 0 auto; /* Center the map horizontally */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+  }
+  
+  
+  .island-button {
+    position: absolute;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent !important;
+  }
+  
+  .island-button img {
+    width: 265px; /* Adjust island button size as needed */
+    height: 265px; /* Adjust island button size as needed */
+    transition: transform 0.3s ease;
+    /* background-color: rgba(219, 160, 33, 0); */
+    background: transparent !important;
+  }
+  
+  /* Define the position of each island button */
+  #RawMaterialsland { top: 40px; left: 800px; }
+  #ProductionIsland { top: 285px; left: 500px; }
+  #WarehouseIsland { top: 15px; left: 400px; }
+  #SalesIsland { top: 15px; left: -100px; }
+  #TransportationIsland { top: 285px; left: 50px; }
+  
+  .island-button img:hover {
+    transform: scale(1.1); /* Slightly scales up the image on hover */
+  }
+
+  /* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    /* z-index: 9999; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+  }
+  
+  .popup-content {
+    background-color: rgba(228, 206, 155);
+    /* margin: auto; */
+    /* padding: 10px; */
+    /* border: 1px solid rgba(228, 206, 155, 0.416); */
+    width: 1200px; /* Make the map width 100% of its container */
+    height: 570px; /* Automatically adjust height based on width */
+    margin: 0 auto; /* Center the map horizontally */
+    overflow: hidden;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .map-iframe {
+    width: 100%;
+    height: 100%; /* Adjust height as needed */
+    border: none;
+  }
+  
+  /* styles.css */
+#openMapButton {
+    margin-top: 10px;
+    margin-left: 1000px;
+    background-color: yellow;
+    color: black;
+    /* padding: 10px 20px; */
+    border: 2px solid black; /* Black border */
+    display: inline-block;
+    width: 80px; /* Adjust button size as needed */
+    height: 80px; /* Adjust button size as needed */
+    border-radius: 50%; /* Makes the button round */
+    cursor: pointer;
+    overflow: hidden; /* Ensures the image doesn't overflow */
+  }
+
+  #openMapButton:hover {
+    background-color: #fdd835; /* Lighter shade of yellow */
+    animation: buttonPulse 1s infinite; /* Apply animation only on hover */
+}
+  
+  #openMapButton .icon {
+    width: 100%; /* Ensures the image fills the button */
+    height: auto; /* Maintains aspect ratio of the image */
+  }
+  
+  
+
+ 

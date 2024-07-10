@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #282c34;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.homepage, .choose-character, .instructions, .map, .game, .winpage {
+    margin-top: 20%;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#tryAgainButton{
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: MedievalSharp, cursive;
+    border: 2px solid black; /* Black border */
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s, transform 0.2s;
+     /* Positioning */
+     position: absolute;
+     left: 50%; /* Move to the horizontal center */
+     transform: translate(-50%, -50%); /* Adjust for center alignment */
+}
+
+#tryAgainButton:hover {
+    background-color: #fdd835; /* Lighter shade of yellow */
+    animation: buttonPulse 1s infinite; /* Apply animation only on hover */
+}
+
+#treasureMap {
+    width: 80%;
+    cursor: pointer;
+}
+
+#gameArea {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#backgroundLoop {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    animation: scrollBackground 10s linear infinite;
+}
+
+#pepsiTruck {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 950px;
+    height: 700px;
+    animation: moveTruck 15s linear forwards;
+}
+
+/*#pepsiRightWheel {
+    position: absolute;
+    bottom: -25%; /* Ajusta esto según sea necesario para la posición correcta 
+    margin-left: 50px; /* Ajusta la mitad del ancho negativo 
+    width: 750px; /* Ajusta esto según el tamaño real de la rueda
+    height: 500px; /* Ajusta esto según el tamaño real de la rueda 
+    transform-origin: 50% 50%;
+    animation: movewheel 15s linear forwards, spinWheel 5s linear;
+}*/
+
+/*#pepsiLeftWheel {
+    position: absolute;
+    bottom: -25%; /* Ajusta esto según sea necesario para la posición correcta
+    margin-left: -75px;/* Ajusta la mitad del ancho positivo 
+    width: 750px; /* Ajusta esto según el tamaño real de la rueda 
+    height: 500px; /* Ajusta esto según el tamaño real de la rueda
+    transform-origin: 50% 50%;
+    animation: movewheel 15s linear forwards, spinWheel 5s linear;
+}*/
+
+@keyframes moveTruck {
+    0% { left: -30%; }
+    100% { left: 40%; }
+}
+
+/*@keyframes movewheel {
+    0% { left: -30%; }
+    100% { left: 40%; } Ajusta esto según la distancia que quieras que recorra el camión
+}*/
+
+/*@keyframes spinWheel {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}*/
+
+#bottle {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('../Debanhi/resources/ChesterQuestionBackground.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+#popupRiddle {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('../Debanhi/resources/ChesterQuestionBackground.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+#popup-content {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#popup-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#popup-image img {
+    display: block;
+    margin: auto;
+    object-fit: contain;
+}
+
+#popup-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: black; /* Color del texto */
+}
+
+#questionText {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: MedievalSharp, cursive;
+    color: black;
+}
+
+#riddleText {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: MedievalSharp, cursive;
+    color: black;
+}
+
+#answerInput {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: MedievalSharp, cursive;
+    border: 2px solid black; /* Black border */
+    border-radius: 10px;
+    background-color: white; /* White background */
+    margin-left: 10px; /* Adjust spacing between button and input */
+}
+
+#submitAnswer {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: MedievalSharp, cursive;
+    border: 2px solid black; /* Black border */
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+ }
+
+#videoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#videoWinContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#introVideo {
+    width: 100%;
+    height: auto;
+}
+
+#winVideo {
+    width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes scrollBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -1000px 0; }
+}
+
+img {
+    width: 50%;
+}

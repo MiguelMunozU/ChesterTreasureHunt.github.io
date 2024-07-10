@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PepsiCo Treasure Hunt Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game">
+        <div id="gameArea">
+            <div id="backgroundLoop"></div>
+            <div id="pepsiTruck"></div>
+            <!--   <div id="bottle" class="hidden"></div>    -->
+            <img id="bottle" src="../Mariana/Pepsi.png" class="hidden" alt="bottle">
+        </div>
+    </div>
+    <div id="popup" class="hidden">
+        <p id="questionText"></p>
+        <input type="text" id="answerInput">
+        <button id="submitAnswer">Submit</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
