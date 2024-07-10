@@ -24,21 +24,22 @@ button {
     cursor: pointer;
 }
 
-#tryAgainButton{
+#tryAgainButton {
     background-color: yellow;
     color: black;
     padding: 10px 20px;
     font-size: 18px;
     font-family: MedievalSharp, cursive;
-    border: 2px solid black; /* Black border */
+    border: 2px solid black;
     border-radius: 10px;
     cursor: pointer;
-    outline: none; /* Remove default focus outline */
+    outline: none;
     transition: background-color 0.3s, transform 0.2s;
-     /* Positioning */
-     position: absolute;
-     left: 50%; /* Move to the horizontal center */
-     transform: translate(-50%, -50%); /* Adjust for center alignment */
+
+    /* Positioning */
+    position: absolute; /* Cambiado a posición relativa */
+    top: 470px; /* Ajusta la posición desde la parte superior */
+    left: 270px; /* Ajusta la posición desde la izquierda */
 }
 
 #tryAgainButton:hover {
